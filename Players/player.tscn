@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://tdb6u3qhc64k"]
+
+[ext_resource type="Script" path="res://Players/player.gd" id="1_o7cv6"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_o7cv6")
+char_name = "Jaguar"
+
+[node name="InfoVBox" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="InfoVBox"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="InfoVBox"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="InfoVBox"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="InfoVBox"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="InfoVBox"]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="InfoVBox"]
+layout_mode = 2
+
+[node name="NextButton" type="Button" parent="InfoVBox"]
+layout_mode = 2
+text = "Next"
+
+[node name="PiratePortrait" type="Node" parent="."]
+
+[connection signal="pressed" from="InfoVBox/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="InfoVBox/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="InfoVBox/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="InfoVBox/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="InfoVBox/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="InfoVBox/NextButton" to="." method="_on_next_button_pressed"]
